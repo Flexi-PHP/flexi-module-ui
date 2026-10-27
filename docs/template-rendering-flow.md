@@ -4,14 +4,14 @@ The UI module provides optional template rendering. Install and activate the mod
 
 ## Components
 
-- `Template` reads a template file and exposes its content and metadata through the currently referenced `CubaDevOps\Flexi\Contracts\Interfaces\TemplateInterface`.
-- `TemplateLocator` creates template objects from paths through the currently referenced `CubaDevOps\Flexi\Contracts\Interfaces\TemplateLocatorInterface`.
-- `HtmlRender` implements the currently referenced `CubaDevOps\Flexi\Contracts\Interfaces\TemplateEngineInterface` and replaces `{{key}}` placeholders with supplied values. It accepts a path or a template object.
+- `Template` reads a template file and exposes its content and metadata through the `Flexi\Contracts\Interfaces\TemplateInterface`.
+- `TemplateLocator` creates template objects from paths through the `Flexi\Contracts\Interfaces\TemplateLocatorInterface`.
+- `HtmlRender` implements the `Flexi\Contracts\Interfaces\TemplateEngineInterface` and replaces `{{key}}` placeholders with supplied values. It accepts a path or a template object.
 
-The service definitions are in `Config/services.json`. The package currently references the legacy contract namespace; migrate it to `flexi/contracts` before using it with current Flexi core. Applications normally inject the template engine contract into their own handlers rather than constructing this module's classes directly.
+The service definitions are in `Config/services.json`. Applications normally inject the template engine contract into their own handlers rather than constructing this module's classes directly.
 
 ```php
-use CubaDevOps\Flexi\Contracts\Interfaces\TemplateEngineInterface;
+use Flexi\Contracts\Interfaces\TemplateEngineInterface;
 
 final class RenderPage
 {

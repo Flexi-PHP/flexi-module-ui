@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace CubaDevOps\Flexi\Modules\Ui\Infrastructure\Ui;
 
-use CubaDevOps\Flexi\Contracts\Classes\Traits\FileHandlerTrait;
-use CubaDevOps\Flexi\Contracts\Interfaces\TemplateInterface;
+use Flexi\Contracts\Classes\Traits\FileHandlerTrait;
+use Flexi\Contracts\Interfaces\TemplateInterface;
 
 class Template implements TemplateInterface
 {

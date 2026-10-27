@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Test\Modules\Ui\Infrastructure\Ui;
+namespace CubaDevOps\Flexi\Modules\Ui\Tests\Infrastructure\Ui;
 
-use CubaDevOps\Flexi\Contracts\Interfaces\TemplateInterface;
-use CubaDevOps\Flexi\Contracts\Interfaces\TemplateLocatorInterface;
+use Flexi\Contracts\Interfaces\TemplateInterface;
+use Flexi\Contracts\Interfaces\TemplateLocatorInterface;
 use CubaDevOps\Flexi\Modules\Ui\Infrastructure\Ui\HtmlRender;
 use PHPUnit\Framework\TestCase;
 
