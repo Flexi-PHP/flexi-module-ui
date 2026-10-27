@@ -1,5 +1,5 @@
 {
-  "name": "cubadevops/flexi-module-ui",
+  "name": "flexi/flexi-module-ui",
   "description": "UI rendering module for Flexi Framework",
   "version": "2.0.0",
   "type": "flexi-module",
