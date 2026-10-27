@@ -7,12 +7,12 @@ This roadmap describes how the optional UI module can grow while keeping present
 - `Template` reads one file and exposes content and metadata.
 - `TemplateLocator` constructs a template from a path.
 - `HtmlRender` replaces `{{key}}` placeholders with string values.
-- The module uses contracts from `flexi/contracts`; verify its Composer manifest and service configuration against the currently supported core/module manifest before activation.
+- The module now targets `flexi/contracts` `^5.2.1` and declares compatibility with Flexi Core `^3.2`.
 - There is no built-in escaping, root containment, layout inheritance, includes, or cache invalidation policy.
 
 ## Roadmap
 
-1. **Align package integration.** Adopt the current `flexi/contracts` package and namespace, declare the current module manifest schema and core compatibility, and validate activation against Flexi core.
+1. **Align package integration.** Use `flexi/contracts` and its `Flexi\Contracts` namespace, declare the current module manifest schema and core compatibility, and verify activation against Flexi core.
 2. **Define safe file resolution.** Support one or more configured template roots, reject traversal and absolute-path escapes, and make missing-template errors predictable.
 3. **Define output safety.** Decide whether the simple engine performs HTML escaping by default or requires explicit safe/raw values. Preserve context-aware escaping; HTML text, attributes, URLs, and JavaScript contexts are not interchangeable.
 4. **Add focused behavior tests.** Cover path containment, missing files, empty values, arrays/objects, escaping, and placeholder edge cases.

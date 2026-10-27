@@ -2,36 +2,27 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Test\Modules\Ui\Infrastructure\Ui;
+namespace Flexi\Modules\Ui\Tests\Infrastructure\Ui;
 
-use CubaDevOps\Flexi\Modules\Ui\Infrastructure\Ui\Template;
-use CubaDevOps\Flexi\Test\TestData\TestDoubles\FileHandler;
+use Flexi\Modules\Ui\Infrastructure\Ui\Template;
 use PHPUnit\Framework\TestCase;
 
 class TemplateTest extends TestCase
 {
     private Template $template;
     private string $path;
-    private FileHandler $file_handler;
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->file_handler = new FileHandler();
-    }
-
     public function setUp(): void
     {
-        $this->path = './tests/TestData/Assets/test.html';
+        $this->path = dirname(__DIR__, 2).'/TestData/Assets/test.html';
 
         $this->template = new Template($this->path);
     }
 
     public function testInvalidPath(): void
     {
-        $path = './tests/invalid/path/test/file.html';
+        $path = dirname(__DIR__, 2).'/invalid/path/test/file.html';
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Template file not found: '.$this->file_handler->normalize($path));
+        $this->expectExceptionMessage('Template file not found: '.$path);
 
         new Template($path);
     }
@@ -44,7 +35,7 @@ class TemplateTest extends TestCase
 
     public function testGetTemplatePath(): void
     {
-        $this->assertEquals($this->file_handler->normalize($this->path), $this->template->getTemplatePath());
+        $this->assertEquals($this->path, $this->template->getTemplatePath());
     }
 
     public function testGetTemplateName(): void
