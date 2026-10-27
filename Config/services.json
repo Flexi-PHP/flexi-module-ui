@@ -3,7 +3,7 @@
     {
       "name": "html_render",
       "class": {
-        "name": "CubaDevOps\\Flexi\\Modules\\Ui\\Infrastructure\\Ui\\HtmlRender",
+        "name": "Flexi\\Modules\\Ui\\Infrastructure\\Ui\\HtmlRender",
         "arguments": [
           "@Flexi\\Contracts\\Interfaces\\TemplateLocatorInterface"
         ]
@@ -12,7 +12,7 @@
     {
       "name": "Flexi\\Contracts\\Interfaces\\TemplateLocatorInterface",
       "class": {
-        "name": "CubaDevOps\\Flexi\\Modules\\Ui\\Infrastructure\\Ui\\TemplateLocator",
+        "name": "Flexi\\Modules\\Ui\\Infrastructure\\Ui\\TemplateLocator",
         "arguments": []
       }
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Ui\Infrastructure\Ui;
+namespace Flexi\Modules\Ui\Infrastructure\Ui;
 
 use Flexi\Contracts\Interfaces\TemplateEngineInterface;
 use Flexi\Contracts\Interfaces\TemplateLocatorInterface;

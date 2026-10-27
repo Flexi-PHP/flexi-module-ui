@@ -1,7 +1,7 @@
 {
   "name": "cubadevops/flexi-module-ui",
   "description": "UI rendering module for Flexi Framework",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "flexi-module",
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "CubaDevOps\\Flexi\\Modules\\Ui\\": ""
+      "Flexi\\Modules\\Ui\\": ""
     }
   },
   "extra": {
@@ -47,7 +47,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "CubaDevOps\\Flexi\\Modules\\Ui\\Tests\\": "tests/"
+      "Flexi\\Modules\\Ui\\Tests\\": "tests/"
     }
   },
   "require-dev": {

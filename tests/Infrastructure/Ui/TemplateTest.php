@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CubaDevOps\Flexi\Modules\Ui\Tests\Infrastructure\Ui;
+namespace Flexi\Modules\Ui\Tests\Infrastructure\Ui;
 
-use CubaDevOps\Flexi\Modules\Ui\Infrastructure\Ui\Template;
+use Flexi\Modules\Ui\Infrastructure\Ui\Template;
 use PHPUnit\Framework\TestCase;
 
 class TemplateTest extends TestCase
